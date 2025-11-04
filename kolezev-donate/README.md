@@ -1,59 +1,128 @@
-# KolezevDonate
+# Kolezev Donate - Donation Website
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.8.
+A professional single-page donation website for independent journalist Dmitry Kolezev, built with Angular 20, PrimeNG, and modern web technologies.
 
-## Development server
+## Features
 
-To start a local development server, run:
+- 🎨 Clean, responsive design with PrimeNG components and PrimeFlex utilities
+- 🌐 Full Russian language interface
+- 💳 Multiple payment options:
+  - Patreon subscriptions
+  - YouTube channel sponsorship
+  - Universal card payments (donat.media)
+  - Cryptocurrency (USDT, TRX, Bitcoin, Ethereum, TON)
+  - Alternative payments (Revolut, PayPal)
+  - US NGO donations (tax-deductible)
+- 📋 One-click copy-to-clipboard functionality with tooltips
+- ♿ WCAG AA accessible with ARIA support
+- 🔍 Complete SEO optimization:
+  - Meta tags and descriptions
+  - Open Graph tags for social media
+  - Twitter Card support
+  - JSON-LD structured data
+  - Auto-generated OG image (1200×630) from YouTube avatar
+  - Robots.txt and sitemap.xml
 
+## Tech Stack
+
+- **Frontend**: Angular 20 (standalone components)
+- **UI Library**: PrimeNG v20 with Aura theme
+- **Styling**: PrimeFlex, PrimeIcons, Custom SCSS
+- **Fonts**: Open Sans (Cyrillic support) via Google Fonts
+- **OG Image Generation**: Sharp (Node.js)
+- **Deployment**: Vercel (static export)
+
+## Local Development
+
+### Prerequisites
+
+- Node.js 20+ (LTS)
+- npm
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Generate the OG image:
+   ```bash
+   npm run og:generate
+   ```
+   This downloads the YouTube avatar and creates a 1200×630 OG image.
+
+### Development Server
+
+Run the development server:
 ```bash
-ng serve
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Navigate to `http://localhost:5000/`. The application will automatically reload when you make changes.
 
-## Code scaffolding
+### Build
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+Build the project for production:
 ```bash
-ng generate component component-name
+npm run build
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+The build artifacts will be stored in the `dist/kolezev-donate/browser/` directory.
 
+### Preview Production Build
+
+Preview the production build locally:
 ```bash
-ng generate --help
+npm run preview
 ```
 
-## Building
+Navigate to `http://localhost:4173/`.
 
-To build the project run:
+## OG Image Generation
 
+The OG (Open Graph) image is automatically generated during the build process. The script:
+
+1. Downloads the YouTube avatar from the configured URL
+2. Creates a 1200×630 image with the avatar centered on a neutral background
+3. Saves it as `src/assets/og/og-image.jpg`
+
+To regenerate manually:
 ```bash
-ng build
+npm run og:generate
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## Configuration
 
-## Running unit tests
+All content, links, and addresses are centralized in `src/app/content.config.ts`. This typed configuration system makes it easy to update donation information by editing the `APP_CONTENT` object.
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+## Deployment
 
+### Vercel (Recommended)
+
+1. Connect your GitHub repository to Vercel
+2. Vercel will automatically detect the Angular project
+3. The `vercel.json` configuration handles OG image generation and building
+
+Alternatively, use Vercel CLI:
 ```bash
-ng test
+npm install -g vercel
+vercel
 ```
 
-## Running end-to-end tests
+### Manual Deployment
 
-For end-to-end (e2e) testing, run:
+Build the project and deploy the `dist/kolezev-donate/browser/` directory to any static hosting service.
 
-```bash
-ng e2e
-```
+## Accessibility & SEO
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+- WCAG AA compliant with ARIA support
+- Full Russian language meta tags
+- Open Graph and Twitter Card tags
+- JSON-LD structured data
+- Sitemap and robots.txt included
 
-## Additional Resources
+## Contact
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+For advertising inquiries: adkolezev@gmail.com

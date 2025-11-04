@@ -1,0 +1,5 @@
+{
+  "framework": "angular",
+  "buildCommand": "npm run og:generate && ng build --configuration production",
+  "outputDirectory": "dist/kolezev-donate/browser"
+}

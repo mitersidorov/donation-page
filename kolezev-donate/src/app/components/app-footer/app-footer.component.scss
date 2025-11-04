@@ -1,0 +1,28 @@
+.app-footer {
+  margin-top: 48px;
+  padding: 24px 16px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.footer-text {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.footer-email {
+  font-weight: 600;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-email:hover {
+  text-decoration: underline;
+}

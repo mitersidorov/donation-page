@@ -1,0 +1,21 @@
+<section class="donation-services-block card">
+  <h2 class="section-title">Подписки и донаты</h2>
+  <div class="services-grid">
+    <a
+      *ngFor="let service of services"
+      [href]="service.url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="service-link"
+    >
+      <button
+        pButton
+        type="button"
+        [label]="service.label"
+        class="p-button-lg p-button-outlined service-button"
+      >
+        <i class="pi pi-external-link" style="margin-left: 8px;"></i>
+      </button>
+    </a>
+  </div>
+</section>

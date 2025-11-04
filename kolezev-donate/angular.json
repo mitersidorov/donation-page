@@ -30,9 +30,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/primeicons",
+                "output": "primeicons"
               }
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css",
               "src/styles.scss"
             ]
           },
@@ -62,6 +69,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "host": "0.0.0.0",
+            "port": 5000,
+            "allowedHosts": true
+          },
           "configurations": {
             "production": {
               "buildTarget": "kolezev-donate:build:production"
@@ -88,9 +100,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "node_modules/primeicons",
+                "output": "primeicons"
               }
             ],
             "styles": [
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeflex/primeflex.css",
               "src/styles.scss"
             ]
           }

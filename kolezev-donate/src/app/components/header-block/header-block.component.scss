@@ -1,0 +1,39 @@
+.header-block {
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.avatar {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #e0e0e0;
+}
+
+.title {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 800px;
+}
+
+.youtube-link {
+  display: inline-block;
+}
+
+@media (max-width: 768px) {
+  .avatar {
+    width: 100px;
+    height: 100px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+}

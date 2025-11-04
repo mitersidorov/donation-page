@@ -1,0 +1,18 @@
+<button
+  pButton
+  type="button"
+  icon="pi pi-copy"
+  class="p-button-sm p-button-outlined"
+  [pTooltip]="getTooltipText()"
+  tooltipPosition="top"
+  [attr.aria-label]="ariaLabel"
+  (click)="copyText()"
+></button>
+<div
+  class="sr-only"
+  role="status"
+  aria-live="polite"
+  aria-atomic="true"
+>
+  {{ copied ? 'Скопировано!' : '' }}
+</div>

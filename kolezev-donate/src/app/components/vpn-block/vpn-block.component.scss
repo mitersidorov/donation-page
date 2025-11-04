@@ -1,0 +1,47 @@
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 12px 0;
+  color: #333;
+}
+
+.vpn-description {
+  margin: 0 0 16px 0;
+  color: #666;
+  line-height: 1.5;
+}
+
+.vpn-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.vpn-link {
+  display: block;
+  text-decoration: none;
+}
+
+.vpn-button {
+  width: 100%;
+  justify-content: center;
+}
+
+.bot-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.bot-value {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  background-color: #f8f9fa;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  color: #333;
+}

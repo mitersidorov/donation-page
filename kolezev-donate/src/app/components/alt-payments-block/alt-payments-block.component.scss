@@ -1,0 +1,70 @@
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  color: #333;
+}
+
+.payment-item {
+  padding: 16px;
+  background-color: #f8f9fa;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  margin-bottom: 16px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.payment-header {
+  margin-bottom: 8px;
+}
+
+.payment-label {
+  font-weight: 600;
+  color: #333;
+  font-size: 1rem;
+}
+
+.payment-value-container,
+.email-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.payment-value {
+  flex: 1;
+  min-width: 0;
+  padding: 8px 12px;
+  background-color: white;
+  border: 1px solid #d0d0d0;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+  color: #333;
+}
+
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paypal-link {
+  display: block;
+  text-decoration: none;
+}
+
+.paypal-button {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .payment-value {
+    font-size: 0.8rem;
+  }
+}

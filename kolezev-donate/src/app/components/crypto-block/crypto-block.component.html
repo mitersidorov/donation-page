@@ -1,0 +1,18 @@
+<section class="crypto-block card">
+  <h2 class="section-title">Криптовалюта</h2>
+  <div class="crypto-list">
+    <div *ngFor="let crypto of cryptoAddresses" class="crypto-item">
+      <div class="crypto-header">
+        <span class="crypto-label">{{ crypto.label }}</span>
+      </div>
+      <div class="crypto-address-container">
+        <code class="crypto-address">{{ crypto.address }}</code>
+        <app-copy-button
+          [textToCopy]="crypto.address"
+          [tooltip]="'Скопировать адрес'"
+          [ariaLabel]="'Скопировать адрес ' + crypto.label"
+        ></app-copy-button>
+      </div>
+    </div>
+  </div>
+</section>
