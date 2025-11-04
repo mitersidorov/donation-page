@@ -1,0 +1,156 @@
+You are an expert Angular engineer. Create a single-page donation website inspired by https://donate.varlamov.me/. Use Angular (latest) with PrimeNG, PrimeFlex, and PrimeIcons. The site is responsive, accessible, SEO-ready, and all UI text is in Russian.
+
+Tech & Tooling
+	•	Angular (latest, via @angular/cli)
+	•	UI: primeng, primeflex, primeicons
+	•	Tooltips: p-tooltip (PrimeNG), positioned top, centered
+	•	Fonts: Open Sans (Cyrillic) via Google Fonts + Arial as default system fallback
+	•	Preconnect + load with display=swap
+	•	Global stack: "Open Sans", Arial, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", sans-serif
+	•	Build: default Angular builder; Node LTS
+	•	Repo: initialize Git (we’ll connect to a public GitHub repo via Replit UI)
+	•	Deploy target: Vercel (static export) with vercel.json
+
+Layout & Responsiveness
+	•	One route / (single page)
+	•	Max page width 1400px, centered main container; mobile + desktop friendly
+	•	Generous spacing, clear hierarchy, high contrast (WCAG AA)
+	•	Smooth focus outlines, keyboard navigation intact
+
+Accessibility & UX
+	•	All copy actions show a classic tooltip at the top center with text Скопировано! (or Ссылка скопирована! for links) and auto-hide after ~1.5–2s
+	•	Provide ARIA live region feedback for keyboard users
+	•	External links: target="_blank" + rel="noopener noreferrer"
+
+SEO
+
+Create full SEO setup:
+	•	<title> and meta description (RU)
+	•	<link rel="canonical">
+	•	robots.txt (allow all) and sitemap.xml (root-level; include /)
+	•	Open Graph tags:
+	•	og:type=website
+	•	og:title, og:description, og:url, og:image (1200×630)
+	•	Twitter Cards:
+	•	twitter:card=summary_large_image
+	•	twitter:title, twitter:description, twitter:image
+	•	Structured data (JSON-LD, WebSite + Person for Дмитрий Колезев with sameAs to YouTube channel)
+
+OG Image (must be generated)
+
+Generate an OG image (1200×630) centered around the avatar:
+	•	Source image: https://yt3.googleusercontent.com/FnsiGT9UWbClv3oazFTAGd_2C-PQK5llBdoJYR5KqATLgiSd_236e57otbBSqnLVkLrUZiSS6eY=s300-c-k-c0x00ffffff-no-rj
+	•	Place avatar centered on a neutral background; optional subtle title text
+	•	Implement a small Node script using sharp (or canvas) to download the avatar at build time and compose src/assets/og/og-image.jpg (1200×630).
+	•	Wire a script: "og:generate": "node scripts/generate-og.js" and run it in postinstall or before build so og:image always exists
+
+Architecture
+
+Components:
+	•	HeaderBlock
+	•	DonationServicesBlock (Patreon + YouTube sponsorship)
+	•	UniversalCardBlock (donat.media)
+	•	CryptoBlock (USDT TRC20/ ERC20, TRX, BTC, ETH, TON)
+	•	AltPaymentsBlock (Revolut + PayPal)
+	•	NGoBlock (US NGO PayPal donate)
+	•	VpnBlock (Ural VPN)
+	•	AppFooter
+
+Shared:
+	•	CopyButtonComponent — props: { textToCopy: string; tooltip?: string; ariaLabel?: string }
+	•	ClipboardService using navigator.clipboard.writeText + graceful fallback
+
+Config-first: all texts/links/addresses live in a typed app.config.ts (AppContent interface). No hardcoded values in templates.
+
+Content (use exactly these values)
+
+Header
+	•	Userpic: https://yt3.googleusercontent.com/FnsiGT9UWbClv3oazFTAGd_2C-PQK5llBdoJYR5KqATLgiSd_236e57otbBSqnLVkLrUZiSS6eY=s300-c-k-c0x00ffffff-no-rj
+	•	Title: Поддержите работу Дмитрия Колезева — независимого журналиста.
+	•	YouTube button → https://www.youtube.com/@Kolezev
+	•	Add YouTube logo on the button (PrimeIcons pi pi-youtube; if insufficient, use assets/logos/youtube.svg)
+
+Block 1 — Donation services (with logos)
+	•	Патреон: https://patreon.com/kolezev (add Patreon logo)
+	•	Спонсорство на YouTube: https://www.youtube.com/channel/UCLxr1ACVGlrUvpGkc_ruMKg/join (add YouTube logo)
+
+Block 2 — Universal card (with payment card icon)
+	•	Донат с любой нероссийской карты: https://kolezev.donat.media/
+	•	Add a payment card icon (PrimeIcons pi pi-credit-card or custom assets/icons/credit-card.svg)
+
+Block 3 — Crypto (logo + label + address + copy button)
+	•	USDT TRC 20 — TZEq5aNnu1jdgd85FTBzyyfJCqvBMX1HAG
+	•	USDT ERC 20 — 0x69eD6836a666A88f98E6EE868522CEaa05F63e47
+	•	TRX — TZEq5aNnu1jdgd85FTBzyyfJCqvBMX1HAG
+	•	Bitcoin — bc1q5crqxquwznp5uwslq48nsqf423akew7q4truu9
+	•	Ethereum — 0x69eD6836a666A88f98E6EE868522CEaa05F63e47
+	•	Ton — UQCHy0MFh4wCT6mR_v9AkvC0A0_v32LknUx_TPNonHSqL8vO
+
+Block 4 — Alternative payments
+	•	Revolut: label Revolut:, username @kolezev
+	•	If safe deep link is known, make it clickable; otherwise keep copy-only with tooltip (configurable in app.config.ts)
+	•	PayPal: label PayPal:, email kolezev@protonmail.com
+	•	Do NOT use mailto:. Link must open a PayPal “Send money” flow targeting the account corresponding to this email.
+	•	Implement paypalDirectUrl in config: if a direct “send to email” URL is available (e.g., a region-appropriate PayPal deep link that accepts an email), use it. If unavailable, fallback to the standard send flow URL (e.g., https://www.paypal.com/myaccount/transfer/send) and display the email prominently with a copy button.
+	•	The copy button always copies the email.
+
+Block 5 — NGO (US taxpayers)
+	•	Донат через американскую НКО (для налогоплательщиков США):
+	•	Link: https://www.paypal.com/donate/?hosted_button_id=LQGY54VJ43R3J
+
+Block 6 — Buy VPN
+	•	Text: Купить Ural VPN: https://t.me/ural_vpnbot
+	•	Copy button for ural_vpnbot
+	•	Logo: placeholder src/assets/logos/ural-vpn.svg (real file will be uploaded later)
+
+Footer
+	•	Размещение рекламы в YouTube, Telegram, Instagram: adkolezev@gmail.com
+	•	Make this a mailto: link in the footer
+
+Logos & Assets
+
+Place under src/assets/logos/:
+	•	YouTube, Patreon, Donat.media (generic if needed), TRX, USDT, BTC, ETH, TON, Revolut, PayPal
+	•	Prefer official simple SVGs where license allows; otherwise neutral glyph placeholders with accessible labels
+	•	The app must build even if some logos are temporarily missing (defensive checks)
+
+Styles
+	•	Global SCSS with:
+	•	Font imports (Open Sans Cyrillic) + fallbacks (Arial first)
+	•	Container helper: .page { max-width: 1400px; margin-inline: auto; padding: 16px; }
+	•	Card helpers, shadows, focus styles, hover states
+	•	PrimeFlex utilities for grids and spacing
+
+Code & Testing
+	•	Strong typing, no any
+	•	CopyButtonComponent unit tests:
+	•	calls navigator.clipboard.writeText
+	•	sets “copied” state reflected in tooltip/ARIA live region
+	•	E2E (lightweight) happy path for copy buttons and critical links
+
+Deployment & Repo
+	•	vercel.json: 
+{
+  "framework": "angular",
+  "buildCommand": "npm run og:generate && ng build --configuration production",
+  "outputDirectory": "dist/kolezev-donate/browser"
+}
+
+	•	package.json scripts:
+	•	"start": "ng serve --host 0.0.0.0 --port 3000"
+	•	"build": "ng build --configuration production"
+	•	"preview": "npx http-server dist/kolezev-donate/browser -p 4173"
+	•	"og:generate": "node scripts/generate-og.js"
+	•	README.md: local run, build, deploy via Vercel (GitHub integration or vercel CLI), and how OG image generation works
+	•	Initialize Git; we will connect to a public GitHub repo via Replit’s UI and push
+
+Deliverables
+	•	Working Angular SPA with all blocks and assets
+	•	SEO complete (robots, sitemap, meta, OG/Twitter, JSON-LD)
+	•	OG image generated from the provided avatar (centered)
+	•	Copy actions with top-center tooltips
+	•	Max width 1400px, centered layout
+	•	Clean, responsive, accessible UI
+
+When finished, start the dev server for preview and summarize:
+	1.	key files/paths (config, assets, OG script), 2) how tooltips/copy work, 3) how SEO tags and OG/Twitter are wired.
