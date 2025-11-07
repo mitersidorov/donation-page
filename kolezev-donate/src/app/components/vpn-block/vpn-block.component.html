@@ -1,6 +1,6 @@
 <section class="vpn-block card">
-  <h2 class="section-title">VPN</h2>
-  <p class="vpn-description">{{ label }}</p>
+  <h2 class="section-title">{{ label }}</h2>
+  <p class="vpn-description">{{ description }}</p>
   <div class="vpn-actions">
     <a
       [href]="url"
@@ -11,18 +11,10 @@
       <button
         pButton
         type="button"
-        [label]="url"
+        label="Перейти в Telegram"
         icon="pi pi-telegram"
-        class="p-button-outlined vpn-button"
+        class="vpn-button"
       ></button>
     </a>
-    <div class="bot-container">
-      <code class="bot-value">@{{ telegramBot }}</code>
-      <app-copy-button
-        [textToCopy]="telegramBot"
-        [tooltip]="'Скопировать username бота'"
-        [ariaLabel]="'Скопировать Telegram bot username'"
-      ></app-copy-button>
-    </div>
   </div>
 </section>

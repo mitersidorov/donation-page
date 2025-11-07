@@ -2,7 +2,7 @@
   <app-header-block
     [avatarUrl]="content.header.avatarUrl"
     [title]="content.header.title"
-    [youtubeUrl]="content.header.youtubeUrl"
+    [socialLinks]="content.header.socialLinks"
   ></app-header-block>
 
   <app-donation-services-block
@@ -19,7 +19,6 @@
   ></app-crypto-block>
 
   <app-alt-payments-block
-    [revolut]="content.altPayments.revolut"
     [paypal]="content.altPayments.paypal"
   ></app-alt-payments-block>
 
@@ -30,9 +29,15 @@
 
   <app-vpn-block
     [label]="content.vpn.label"
-    [telegramBot]="content.vpn.telegramBot"
+    [description]="content.vpn.description"
     [url]="content.vpn.url"
   ></app-vpn-block>
+
+  <app-other-ways-block
+    [title]="content.otherWays.title"
+    [content]="content.otherWays.content"
+    [email]="content.otherWays.email"
+  ></app-other-ways-block>
 </div>
 
 <app-footer

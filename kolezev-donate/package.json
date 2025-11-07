@@ -7,7 +7,6 @@
     "build": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "og:generate": "node scripts/generate-og.js",
     "preview": "npx http-server dist/kolezev-donate/browser -p 4173",
     "serve:prod": "http-server dist/kolezev-donate/browser -p 5000 -c-1 --gzip -a 0.0.0.0"
   },

@@ -3,16 +3,11 @@ import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
 import { CopyButtonComponent } from '../copy-button/copy-button.component';
 
-interface RevolutPayment {
-  label: string;
-  username: string;
-  url?: string;
-}
-
 interface PayPalPayment {
   label: string;
   email: string;
   sendMoneyUrl: string;
+  icon: string;
 }
 
 @Component({
@@ -23,6 +18,5 @@ interface PayPalPayment {
   styleUrls: ['./alt-payments-block.component.scss']
 })
 export class AltPaymentsBlockComponent {
-  @Input() revolut!: RevolutPayment;
   @Input() paypal!: PayPalPayment;
 }

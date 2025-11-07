@@ -1,6 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
+import { SocialLink } from '../../content.config';
 
 @Component({
   selector: 'app-header-block',
@@ -12,5 +13,5 @@ import { ButtonModule } from 'primeng/button';
 export class HeaderBlockComponent {
   @Input() avatarUrl: string = '';
   @Input() title: string = '';
-  @Input() youtubeUrl: string = '';
+  @Input() socialLinks: SocialLink[] = [];
 }

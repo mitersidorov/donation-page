@@ -10,6 +10,12 @@ export interface DonationService {
   logo?: string;
 }
 
+export interface SocialLink {
+  platform: string;
+  url: string;
+  icon: string;
+}
+
 export interface AppContent {
   seo: {
     title: string;
@@ -22,7 +28,7 @@ export interface AppContent {
   header: {
     avatarUrl: string;
     title: string;
-    youtubeUrl: string;
+    socialLinks: SocialLink[];
   };
   donationServices: DonationService[];
   universalCard: {
@@ -31,15 +37,11 @@ export interface AppContent {
   };
   cryptoAddresses: CryptoAddress[];
   altPayments: {
-    revolut: {
-      label: string;
-      username: string;
-      url?: string;
-    };
     paypal: {
       label: string;
       email: string;
       sendMoneyUrl: string;
+      icon: string;
     };
   };
   ngo: {
@@ -48,8 +50,13 @@ export interface AppContent {
   };
   vpn: {
     label: string;
-    telegramBot: string;
+    description: string;
     url: string;
+  };
+  otherWays: {
+    title: string;
+    content: string;
+    email: string;
   };
   footer: {
     advertisingText: string;
@@ -69,7 +76,14 @@ export const APP_CONTENT: AppContent = {
   header: {
     avatarUrl: 'https://yt3.googleusercontent.com/FnsiGT9UWbClv3oazFTAGd_2C-PQK5llBdoJYR5KqATLgiSd_236e57otbBSqnLVkLrUZiSS6eY=s300-c-k-c0x00ffffff-no-rj',
     title: 'Поддержите работу Дмитрия Колезева — независимого журналиста.',
-    youtubeUrl: 'https://www.youtube.com/@Kolezev'
+    socialLinks: [
+      { platform: 'YouTube', url: 'https://www.youtube.com/@Kolezev', icon: 'pi-youtube' },
+      { platform: 'Telegram', url: 'https://t.me/kolezev', icon: 'pi-telegram' },
+      { platform: 'Instagram', url: 'https://instagram.com/kolezev', icon: 'pi-instagram' },
+      { platform: 'TikTok', url: 'https://tiktok.com/@kolezev', icon: 'pi-tiktok' },
+      { platform: 'X', url: 'https://x.com/kolezev', icon: 'pi-twitter' },
+      { platform: 'Threads', url: 'https://threads.net/@kolezev', icon: 'pi-comments' }
+    ]
   },
   donationServices: [
     {
@@ -120,24 +134,26 @@ export const APP_CONTENT: AppContent = {
     }
   ],
   altPayments: {
-    revolut: {
-      label: 'Revolut',
-      username: '@kolezev'
-    },
     paypal: {
       label: 'PayPal',
       email: 'kolezev@protonmail.com',
-      sendMoneyUrl: 'https://www.paypal.com/paypalme/kolezev'
+      sendMoneyUrl: 'https://www.paypal.com/paypalme/kolezev',
+      icon: 'pi-paypal'
     }
   },
   ngo: {
-    label: 'Донат через американскую НКО (для налогоплательщиков США)',
+    label: 'Донат через американскую НКО',
     url: 'https://www.paypal.com/donate/?hosted_button_id=LQGY54VJ43R3J'
   },
   vpn: {
-    label: 'Купить Ural VPN',
-    telegramBot: 'ural_vpnbot',
+    label: 'Ural VPN',
+    description: 'Оформите подписку на наш VPN — и поможете независимой журналистике.',
     url: 'https://t.me/ural_vpnbot'
+  },
+  otherWays: {
+    title: 'Другие способы',
+    content: 'Хотите задонатить другим способом? Напишите мне на',
+    email: 'kolezev.inbox@gmail.com'
   },
   footer: {
     advertisingText: 'Размещение рекламы в YouTube, Telegram, Instagram',

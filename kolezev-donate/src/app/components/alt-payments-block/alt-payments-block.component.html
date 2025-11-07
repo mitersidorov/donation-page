@@ -1,24 +1,7 @@
 <section class="alt-payments-block card">
   <h2 class="section-title">Альтернативные способы</h2>
-  
-  <div class="payment-item">
-    <div class="payment-header">
-      <span class="payment-label">{{ revolut.label }}:</span>
-    </div>
-    <div class="payment-value-container">
-      <code class="payment-value">{{ revolut.username }}</code>
-      <app-copy-button
-        [textToCopy]="revolut.username"
-        [tooltip]="'Скопировать username'"
-        [ariaLabel]="'Скопировать Revolut username'"
-      ></app-copy-button>
-    </div>
-  </div>
 
   <div class="payment-item">
-    <div class="payment-header">
-      <span class="payment-label">{{ paypal.label }}:</span>
-    </div>
     <div class="payment-actions">
       <a
         [href]="paypal.sendMoneyUrl"
@@ -29,9 +12,9 @@
         <button
           pButton
           type="button"
-          label="Отправить через PayPal"
-          icon="pi pi-external-link"
-          class="p-button-outlined paypal-button"
+          [label]="paypal.label"
+          [icon]="'pi ' + paypal.icon"
+          class="paypal-button"
         ></button>
       </a>
       <div class="email-container">

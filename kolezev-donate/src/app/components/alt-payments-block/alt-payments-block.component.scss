@@ -54,6 +54,8 @@
   gap: 12px;
 }
 
+$primary-blue: #1f4499;
+
 .paypal-link {
   display: block;
   text-decoration: none;
@@ -61,6 +63,15 @@
 
 .paypal-button {
   width: 100%;
+  max-width: 400px;
+  background-color: $primary-blue !important;
+  border-color: $primary-blue !important;
+  color: white !important;
+  
+  &:hover {
+    background-color: #173677 !important;
+    border-color: #173677 !important;
+  }
 }
 
 @media (max-width: 768px) {

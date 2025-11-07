@@ -1,8 +1,9 @@
 <section class="crypto-block card">
   <h2 class="section-title">Криптовалюта</h2>
-  <div class="crypto-list">
+  <div class="crypto-grid">
     <div *ngFor="let crypto of cryptoAddresses" class="crypto-item">
       <div class="crypto-header">
+        <img *ngIf="crypto.logo" [src]="crypto.logo" [alt]="crypto.label" class="crypto-logo" />
         <span class="crypto-label">{{ crypto.label }}</span>
       </div>
       <div class="crypto-address-container">

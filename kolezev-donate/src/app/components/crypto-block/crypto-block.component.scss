@@ -5,10 +5,16 @@
   color: #333;
 }
 
-.crypto-list {
-  display: flex;
-  flex-direction: column;
+.crypto-grid {
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 16px;
+}
+
+@media (min-width: 769px) {
+  .crypto-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .crypto-item {
@@ -20,6 +26,14 @@
 
 .crypto-header {
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crypto-logo {
+  width: 24px;
+  height: 24px;
 }
 
 .crypto-label {

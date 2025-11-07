@@ -8,19 +8,22 @@
       height="120"
     />
     <h1 class="title">{{ title }}</h1>
-    <a
-      [href]="youtubeUrl"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="youtube-link"
-    >
-      <button
-        pButton
-        type="button"
-        label="YouTube канал"
-        icon="pi pi-youtube"
-        class="p-button-lg p-button-danger"
-      ></button>
-    </a>
+    <div class="social-buttons">
+      @for (link of socialLinks; track link.platform) {
+        <a
+          [href]="link.url"
+          target="_blank"
+          rel="noopener noreferrer"
+          [attr.aria-label]="link.platform"
+        >
+          <button
+            pButton
+            type="button"
+            [icon]="'pi ' + link.icon"
+            class="p-button-rounded social-button"
+          ></button>
+        </a>
+      }
+    </div>
   </div>
 </header>

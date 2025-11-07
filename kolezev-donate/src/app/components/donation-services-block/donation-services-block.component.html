@@ -11,9 +11,10 @@
       <button
         pButton
         type="button"
-        [label]="service.label"
-        class="p-button-lg p-button-outlined service-button"
+        class="p-button-lg service-button"
       >
+        <img *ngIf="service.logo" [src]="service.logo" [alt]="service.label" class="service-logo" />
+        <span>{{ service.label }}</span>
         <i class="pi pi-external-link" style="margin-left: 8px;"></i>
       </button>
     </a>

@@ -1,0 +1,67 @@
+Prompt for Replit AI — apply exact design and content updates. Do not modify anything beyond these points. Do not delete existing functionality or structure. Only apply the following changes.
+	1.	Title & Meta
+Update , Open Graph (og:title), and Twitter Card (twitter:title) to: “Журналист Дмитрий Колезев. Поддержите мою работу”. Ensure the same phrase is used for og:description and twitter:description if they duplicate the page description.
+	2.	Brand Colors
+Use exact brand palette:
+Primary blue: #1f4499 — main accent color, replaces all greens and existing blue buttons, including “Donate via NGO” and link colors.
+Peach/red: #ef5b5b — used only for header social media buttons (YouTube, Telegram, Instagram, TikTok, X, Threads).
+Add SCSS variables:
+$primary-blue: #1f4499;
+$accent-peach: #ef5b5b;
+	3.	Header (Social Buttons)
+Add social link buttons after the YouTube button with these links and icons.
+Use PrimeIcons from https://primeng.org/icons
+	4.	YouTube (already exists; keep first)
+	5.	Telegram — https://t.me/kolezev — icon: pi-telegram
+	6.	Instagram — https://instagram.com/kolezev — icon: pi-instagram
+	7.	TikTok — https://tiktok.com/kolezev — icon: pi-tiktok
+	8.	X (Twitter) — https://x.com/kolezev — icon: pi-twitter
+	9.	Threads — https://threads.com/kolezev — icon: pi-comments
+All social buttons use the accent peach background (#ef5b5b), rounded, with white icons, equal size.
+	10.	Alternative Payments
+Remove the Revolut block completely. Keep only PayPal.
+	11.	NGO Block
+Simplify title — remove text in parentheses: “Донат через американскую НКО”.
+	12.	VPN Block
+Title: Ural VPN.
+Text: “Оформите подписку на наш VPN — и поможете независимой журналистике.”
+Completely remove the field with the Telegram bot username and the copy button.
+	13.	New Block — “Другие способы”
+Add a new final block after VPN.
+Title: “Другие способы”
+Content: “Хотите задонатить другим способом? Напишите мне на mailto:kolezev.inbox@gmail.com”
+	14.	Button Styling
+For all non-copy buttons:
+Add max-width: 400px.
+Use solid style (not outlined).
+Button background color: $primary-blue (#1f4499).
+Text color: white.
+Hover: slightly darker shade of blue (#173677).
+Keep cursor: pointer and consistent border-radius.
+	15.	Crypto Block Layout
+For all viewports except mobile and tablet, arrange crypto cards in two columns using PrimeFlex grid utilities (p-grid, p-col-6).
+Mobile and tablet: single column.
+	16.	Crypto Logos
+Use crypto logos as on https://donate.varlamov.me
+USDT (TRC20 & ERC20) — https://donate.varlamov.me/img/usdt.svg
+TRX — https://donate.varlamov.me/img/trx.svg
+Bitcoin — https://donate.varlamov.me/img/btc.svg
+Ethereum — https://donate.varlamov.me/img/eth.svg
+Ton — https://donate.varlamov.me/img/ton.svg
+Save them under src/assets/logos/ with matching file names (usdt.svg, trx.svg, etc.).
+	17.	Donation Buttons Logos
+In Donation services block (Patreon + YouTube):
+Add Patreon logo (https://donate.varlamov.me/img/patreon.svg) before “Патреон” label.
+Add YouTube logo (https://donate.varlamov.me/img/youtube.svg) before “Спонсорство на YouTube”.
+Both icons should be white.
+	18.	Shadows
+Remove all box shadows from cards, buttons, and containers. Use a clean, flat layout.
+	19.	PayPal Logo
+In Alternative Payments block, add PayPal logo. Use PrimeIcons icon name: pi-paypal from https://primeng.org/icons.
+
+Important
+Do not change file structure, build configuration, deployment scripts, or SEO meta.
+Fix any existing errors or build issues.
+Remove the OG:image generation script and all related references, since the build currently fails on it.
+Do not modify anything beyond the points above.
+Preserve all existing accessibility features and tooltips.

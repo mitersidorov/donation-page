@@ -17,6 +17,8 @@
   gap: 12px;
 }
 
+$primary-blue: #1f4499;
+
 .vpn-link {
   display: block;
   text-decoration: none;
@@ -24,24 +26,14 @@
 
 .vpn-button {
   width: 100%;
+  max-width: 400px;
   justify-content: center;
-}
-
-.bot-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-}
-
-.bot-value {
-  flex: 1;
-  min-width: 0;
-  padding: 8px 12px;
-  background-color: #f8f9fa;
-  border: 1px solid #d0d0d0;
-  border-radius: 4px;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 0.9rem;
-  color: #333;
+  background-color: $primary-blue !important;
+  border-color: $primary-blue !important;
+  color: white !important;
+  
+  &:hover {
+    background-color: #173677 !important;
+    border-color: #173677 !important;
+  }
 }

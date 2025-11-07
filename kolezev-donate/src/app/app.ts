@@ -9,6 +9,7 @@ import { CryptoBlockComponent } from './components/crypto-block/crypto-block.com
 import { AltPaymentsBlockComponent } from './components/alt-payments-block/alt-payments-block.component';
 import { NgoBlockComponent } from './components/ngo-block/ngo-block.component';
 import { VpnBlockComponent } from './components/vpn-block/vpn-block.component';
+import { OtherWaysBlockComponent } from './components/other-ways-block/other-ways-block.component';
 import { AppFooterComponent } from './components/app-footer/app-footer.component';
 
 @Component({
@@ -23,6 +24,7 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
     AltPaymentsBlockComponent,
     NgoBlockComponent,
     VpnBlockComponent,
+    OtherWaysBlockComponent,
     AppFooterComponent
   ],
   templateUrl: './app.html',

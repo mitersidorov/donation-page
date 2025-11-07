@@ -1,3 +1,5 @@
+$accent-peach: #ef5b5b;
+
 .header-block {
   text-align: center;
 }
@@ -23,8 +25,24 @@
   max-width: 800px;
 }
 
-.youtube-link {
-  display: inline-block;
+.social-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-button {
+  background-color: $accent-peach !important;
+  border-color: $accent-peach !important;
+  color: white !important;
+  width: 48px !important;
+  height: 48px !important;
+  
+  &:hover {
+    background-color: darken($accent-peach, 8%) !important;
+    border-color: darken($accent-peach, 8%) !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -35,5 +53,10 @@
 
   .title {
     font-size: 1.5rem;
+  }
+  
+  .social-button {
+    width: 44px !important;
+    height: 44px !important;
   }
 }

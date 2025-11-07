@@ -1,3 +1,5 @@
+$primary-blue: #1f4499;
+
 .section-title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -18,7 +20,23 @@
 
 .service-button {
   width: 100%;
+  max-width: 400px;
   justify-content: center;
+  background-color: $primary-blue !important;
+  border-color: $primary-blue !important;
+  color: white !important;
+  
+  &:hover {
+    background-color: #173677 !important;
+    border-color: #173677 !important;
+  }
+}
+
+.service-logo {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  filter: brightness(0) invert(1);
 }
 
 @media (max-width: 768px) {
