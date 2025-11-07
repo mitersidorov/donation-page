@@ -9,15 +9,13 @@ $primary-blue: #1f4499;
   font-weight: 600;
   margin: 0 0 12px 0;
   color: #333;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
 }
 
 .vpn-logo {
-  height: 32px;
-  width: auto;
+  width: 100px;
+  height: auto;
+  margin: 0 auto 12px;
+  display: block;
 }
 
 .vpn-description {
