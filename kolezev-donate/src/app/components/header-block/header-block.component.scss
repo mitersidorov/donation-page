@@ -36,8 +36,6 @@ $accent-peach: #ef5b5b;
   background-color: $accent-peach !important;
   border-color: $accent-peach !important;
   color: white !important;
-  width: 48px !important;
-  height: 48px !important;
   
   &:hover {
     background-color: darken($accent-peach, 8%) !important;
@@ -53,10 +51,5 @@ $accent-peach: #ef5b5b;
 
   .title {
     font-size: 1.5rem;
-  }
-  
-  .social-button {
-    width: 44px !important;
-    height: 44px !important;
   }
 }
