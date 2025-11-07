@@ -34,6 +34,11 @@
               },
               {
                 "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
+              },
+              {
+                "glob": "**/*",
                 "input": "node_modules/primeicons",
                 "output": "primeicons"
               }
@@ -101,6 +106,11 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "assets"
               },
               {
                 "glob": "**/*",
