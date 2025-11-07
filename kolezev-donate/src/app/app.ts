@@ -4,7 +4,6 @@ import { RouterOutlet } from '@angular/router';
 import { APP_CONTENT } from './content.config';
 import { HeaderBlockComponent } from './components/header-block/header-block.component';
 import { DonationServicesBlockComponent } from './components/donation-services-block/donation-services-block.component';
-import { UniversalCardBlockComponent } from './components/universal-card-block/universal-card-block.component';
 import { CryptoBlockComponent } from './components/crypto-block/crypto-block.component';
 import { NgoBlockComponent } from './components/ngo-block/ngo-block.component';
 import { VpnBlockComponent } from './components/vpn-block/vpn-block.component';
@@ -18,7 +17,6 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
     RouterOutlet,
     HeaderBlockComponent,
     DonationServicesBlockComponent,
-    UniversalCardBlockComponent,
     CryptoBlockComponent,
     NgoBlockComponent,
     VpnBlockComponent,
