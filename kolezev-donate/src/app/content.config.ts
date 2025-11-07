@@ -105,32 +105,32 @@ export const APP_CONTENT: AppContent = {
     {
       label: 'USDT TRC 20',
       address: 'TZEq5aNnu1jdgd85FTBzyyfJCqvBMX1HAG',
-      logo: '/assets/logos/usdt.svg'
+      logo: '/assets/logos/usdt-logo.svg'
     },
     {
       label: 'USDT ERC 20',
       address: '0x69eD6836a666A88f98E6EE868522CEaa05F63e47',
-      logo: '/assets/logos/usdt.svg'
+      logo: '/assets/logos/usdt-logo.svg'
     },
     {
       label: 'TRX',
       address: 'TZEq5aNnu1jdgd85FTBzyyfJCqvBMX1HAG',
-      logo: '/assets/logos/trx.svg'
+      logo: '/assets/logos/tron-trx-logo.svg'
     },
     {
       label: 'Bitcoin',
       address: 'bc1q5crqxquwznp5uwslq48nsqf423akew7q4truu9',
-      logo: '/assets/logos/btc.svg'
+      logo: '/assets/logos/bitcoin-btc-logo.svg'
     },
     {
       label: 'Ethereum',
       address: '0x69eD6836a666A88f98E6EE868522CEaa05F63e47',
-      logo: '/assets/logos/eth.svg'
+      logo: '/assets/logos/ethereum-eth-logo.svg'
     },
     {
       label: 'Ton',
       address: 'UQCHy0MFh4wCT6mR_v9AkvC0A0_v32LknUx_TPNonHSqL8vO',
-      logo: '/assets/logos/ton.svg'
+      logo: '/assets/logos/toncoin-ton-logo.svg'
     }
   ],
   altPayments: {
