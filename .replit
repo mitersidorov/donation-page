@@ -37,7 +37,7 @@ externalPort = 3000
 [deployment]
 deploymentTarget = "autoscale"
 run = ["bash", "-c", "cd kolezev-donate && npm run serve:prod"]
-build = ["bash", "-c", "cd kolezev-donate && npm run og:generate && npm run build"]
+build = ["bash", "-c", "cd kolezev-donate && npm run build"]
 
 [nix]
 channel = "stable-25_05"

@@ -109,6 +109,7 @@ Configured for Vercel with `vercel.json`:
 - Disabled Angular CLI analytics to prevent interactive prompts
 - Configured deployment with autoscale target
 - Updated workflow to build and serve production bundle
+- Simplified deployment by pre-generating OG image (no runtime generation needed)
 - Created comprehensive README.md with full documentation
 
 ### 2025-11-04

@@ -82,16 +82,17 @@ Navigate to `http://localhost:4173/`.
 
 ## OG Image Generation
 
-The OG (Open Graph) image is automatically generated during the build process. The script:
+The OG (Open Graph) image is already generated and included in the repository at `src/assets/og/og-image.jpg`. 
 
-1. Downloads the YouTube avatar from the configured URL
-2. Creates a 1200×630 image with the avatar centered on a neutral background
-3. Saves it as `src/assets/og/og-image.jpg`
-
-To regenerate manually:
+To regenerate it (only needed if the YouTube avatar changes):
 ```bash
 npm run og:generate
 ```
+
+The script:
+1. Downloads the YouTube avatar from the configured URL
+2. Creates a 1200×630 image with the avatar centered on a neutral background
+3. Saves it as `src/assets/og/og-image.jpg`
 
 ## Configuration
 
