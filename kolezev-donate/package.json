@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "og:generate": "node scripts/generate-og.js",
-    "preview": "npx http-server dist/kolezev-donate/browser -p 4173"
+    "preview": "npx http-server dist/kolezev-donate/browser -p 4173",
+    "serve:prod": "http-server dist/kolezev-donate/browser -p 5000 -c-1 --gzip -a 0.0.0.0"
   },
   "prettier": {
     "printWidth": 100,
@@ -31,6 +32,7 @@
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
     "@primeng/themes": "^20.3.0",
+    "http-server": "^14.1.1",
     "primeflex": "^4.0.0",
     "primeicons": "^7.0.0",
     "primeng": "^20.3.0",
