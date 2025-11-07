@@ -12,4 +12,7 @@ import { ButtonModule } from 'primeng/button';
 export class UniversalCardBlockComponent {
   @Input() label: string = '';
   @Input() url: string = '';
+  @Input() paypalLabel: string = '';
+  @Input() paypalUrl: string = '';
+  @Input() paypalIcon: string = '';
 }

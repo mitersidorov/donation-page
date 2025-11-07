@@ -7,8 +7,15 @@ $primary-blue: #1f4499;
   color: #333;
 }
 
+.buttons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
 .card-link {
-  display: block;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
 }
 
@@ -23,5 +30,11 @@ $primary-blue: #1f4499;
   &:hover {
     background-color: #173677 !important;
     border-color: #173677 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .buttons-grid {
+    grid-template-columns: 1fr;
   }
 }

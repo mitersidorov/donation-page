@@ -1,17 +1,33 @@
 <section class="universal-card-block card">
   <h2 class="section-title">Банковские карты</h2>
-  <a
-    [href]="url"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="card-link"
-  >
-    <button
-      pButton
-      type="button"
-      [label]="label"
-      icon="pi pi-credit-card"
-      class="p-button-lg p-button-success card-button"
-    ></button>
-  </a>
+  <div class="buttons-grid">
+    <a
+      [href]="url"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="card-link"
+    >
+      <button
+        pButton
+        type="button"
+        [label]="label"
+        icon="pi pi-credit-card"
+        class="p-button-lg card-button"
+      ></button>
+    </a>
+    <a
+      [href]="paypalUrl"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="card-link"
+    >
+      <button
+        pButton
+        type="button"
+        [label]="paypalLabel"
+        [icon]="'pi ' + paypalIcon"
+        class="p-button-lg card-button"
+      ></button>
+    </a>
+  </div>
 </section>

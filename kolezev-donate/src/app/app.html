@@ -20,15 +20,14 @@
   <app-universal-card-block
     [label]="content.universalCard.label"
     [url]="content.universalCard.url"
+    [paypalLabel]="content.altPayments.paypal.label"
+    [paypalUrl]="content.altPayments.paypal.sendMoneyUrl"
+    [paypalIcon]="content.altPayments.paypal.icon"
   ></app-universal-card-block>
 
   <app-crypto-block
     [cryptoAddresses]="content.cryptoAddresses"
   ></app-crypto-block>
-
-  <app-alt-payments-block
-    [paypal]="content.altPayments.paypal"
-  ></app-alt-payments-block>
 
   <app-ngo-block
     [label]="content.ngo.label"
