@@ -6,7 +6,6 @@ import { HeaderBlockComponent } from './components/header-block/header-block.com
 import { DonationServicesBlockComponent } from './components/donation-services-block/donation-services-block.component';
 import { UniversalCardBlockComponent } from './components/universal-card-block/universal-card-block.component';
 import { CryptoBlockComponent } from './components/crypto-block/crypto-block.component';
-import { AltPaymentsBlockComponent } from './components/alt-payments-block/alt-payments-block.component';
 import { NgoBlockComponent } from './components/ngo-block/ngo-block.component';
 import { VpnBlockComponent } from './components/vpn-block/vpn-block.component';
 import { OtherWaysBlockComponent } from './components/other-ways-block/other-ways-block.component';
@@ -21,7 +20,6 @@ import { AppFooterComponent } from './components/app-footer/app-footer.component
     DonationServicesBlockComponent,
     UniversalCardBlockComponent,
     CryptoBlockComponent,
-    AltPaymentsBlockComponent,
     NgoBlockComponent,
     VpnBlockComponent,
     OtherWaysBlockComponent,
