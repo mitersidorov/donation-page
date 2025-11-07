@@ -5,25 +5,33 @@
     [socialLinks]="content.header.socialLinks"
   ></app-header-block>
 
-  <app-donation-services-block
-    [title]="content.donationServices[0].label"
-    [url]="content.donationServices[0].url"
-    [logo]="content.donationServices[0].logo"
-  ></app-donation-services-block>
+  <div class="payment-options-grid">
+    <app-donation-services-block
+      [title]="content.donationServices[0].label"
+      [url]="content.donationServices[0].url"
+      [buttonText]="'Оформить подписку'"
+    ></app-donation-services-block>
 
-  <app-donation-services-block
-    [title]="content.donationServices[1].label"
-    [url]="content.donationServices[1].url"
-    [logo]="content.donationServices[1].logo"
-  ></app-donation-services-block>
+    <app-donation-services-block
+      [title]="content.donationServices[1].label"
+      [url]="content.donationServices[1].url"
+      [buttonText]="'Оформить подписку'"
+    ></app-donation-services-block>
 
-  <app-universal-card-block
-    [label]="content.universalCard.label"
-    [url]="content.universalCard.url"
-    [paypalLabel]="content.altPayments.paypal.label"
-    [paypalUrl]="content.altPayments.paypal.sendMoneyUrl"
-    [paypalIcon]="content.altPayments.paypal.icon"
-  ></app-universal-card-block>
+    <app-donation-services-block
+      [title]="'Банковские карты'"
+      [url]="content.universalCard.url"
+      [buttonText]="content.universalCard.label"
+      [icon]="'pi-credit-card'"
+    ></app-donation-services-block>
+
+    <app-donation-services-block
+      [title]="'PayPal'"
+      [url]="content.altPayments.paypal.sendMoneyUrl"
+      [buttonText]="content.altPayments.paypal.label"
+      [icon]="'pi-paypal'"
+    ></app-donation-services-block>
+  </div>
 
   <app-crypto-block
     [cryptoAddresses]="content.cryptoAddresses"

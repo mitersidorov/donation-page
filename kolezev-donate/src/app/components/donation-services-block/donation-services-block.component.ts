@@ -12,5 +12,7 @@ import { ButtonModule } from 'primeng/button';
 export class DonationServicesBlockComponent {
   @Input() title: string = '';
   @Input() url: string = '';
-  @Input() logo?: string;
+  @Input() logo?: string | null;
+  @Input() buttonText: string = 'Оформить подписку';
+  @Input() icon: string = '';
 }

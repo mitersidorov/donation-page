@@ -10,10 +10,10 @@
       <button
         pButton
         type="button"
+        [icon]="icon ? 'pi ' + icon : ''"
         class="p-button-lg service-button"
       >
-        <img *ngIf="logo" [src]="logo" [alt]="title" class="service-logo" />
-        <span>Оформить подписку</span>
+        <span>{{ buttonText }}</span>
       </button>
     </a>
   </div>
