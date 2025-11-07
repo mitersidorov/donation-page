@@ -7,20 +7,20 @@ $primary-blue: #1f4499;
   color: #333;
 }
 
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+.service-container {
+  display: flex;
+  justify-content: center;
 }
 
 .service-link {
   display: block;
   text-decoration: none;
+  width: 100%;
+  max-width: 400px;
 }
 
 .service-button {
   width: 100%;
-  max-width: 400px;
   justify-content: center;
   background-color: $primary-blue !important;
   border-color: $primary-blue !important;
@@ -37,10 +37,4 @@ $primary-blue: #1f4499;
   height: 20px;
   margin-right: 8px;
   filter: brightness(0) invert(1);
-}
-
-@media (max-width: 768px) {
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
 }

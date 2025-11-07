@@ -6,7 +6,15 @@
   ></app-header-block>
 
   <app-donation-services-block
-    [services]="content.donationServices"
+    [title]="content.donationServices[0].label"
+    [url]="content.donationServices[0].url"
+    [logo]="content.donationServices[0].logo"
+  ></app-donation-services-block>
+
+  <app-donation-services-block
+    [title]="content.donationServices[1].label"
+    [url]="content.donationServices[1].url"
+    [logo]="content.donationServices[1].logo"
   ></app-donation-services-block>
 
   <app-universal-card-block

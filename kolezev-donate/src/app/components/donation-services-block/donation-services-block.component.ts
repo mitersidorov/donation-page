@@ -1,7 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonModule } from 'primeng/button';
-import { DonationService } from '../../content.config';
 
 @Component({
   selector: 'app-donation-services-block',
@@ -11,5 +10,7 @@ import { DonationService } from '../../content.config';
   styleUrls: ['./donation-services-block.component.scss']
 })
 export class DonationServicesBlockComponent {
-  @Input() services: DonationService[] = [];
+  @Input() title: string = '';
+  @Input() url: string = '';
+  @Input() logo?: string;
 }

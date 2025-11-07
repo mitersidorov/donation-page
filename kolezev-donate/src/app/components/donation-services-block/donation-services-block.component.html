@@ -1,9 +1,8 @@
 <section class="donation-services-block card">
-  <h2 class="section-title">Подписки и донаты</h2>
-  <div class="services-grid">
+  <h2 class="section-title">{{ title }}</h2>
+  <div class="service-container">
     <a
-      *ngFor="let service of services"
-      [href]="service.url"
+      [href]="url"
       target="_blank"
       rel="noopener noreferrer"
       class="service-link"
@@ -13,9 +12,8 @@
         type="button"
         class="p-button-lg service-button"
       >
-        <img *ngIf="service.logo" [src]="service.logo" [alt]="service.label" class="service-logo" />
-        <span>{{ service.label }}</span>
-        <i class="pi pi-external-link" style="margin-left: 8px;"></i>
+        <img *ngIf="logo" [src]="logo" [alt]="title" class="service-logo" />
+        <span>Оформить подписку</span>
       </button>
     </a>
   </div>
