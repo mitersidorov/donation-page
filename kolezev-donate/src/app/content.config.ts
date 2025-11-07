@@ -81,7 +81,7 @@ export const APP_CONTENT: AppContent = {
       { platform: 'Telegram', url: 'https://t.me/kolezev', icon: 'pi-telegram' },
       { platform: 'Instagram', url: 'https://instagram.com/kolezev', icon: 'pi-instagram' },
       { platform: 'TikTok', url: 'https://tiktok.com/@kolezev', icon: 'pi-tiktok' },
-      { platform: 'X', url: 'https://x.com/kolezev', icon: 'pi-twitter' },
+      { platform: 'X (Twitter)', url: 'https://x.com/kolezev', icon: 'pi-twitter' },
       { platform: 'Threads', url: 'https://threads.net/@kolezev', icon: 'pi-comments' }
     ]
   },
