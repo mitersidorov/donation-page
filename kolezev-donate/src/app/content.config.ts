@@ -98,7 +98,7 @@ export const APP_CONTENT: AppContent = {
     }
   ],
   universalCard: {
-    label: 'Донат с любой нероссийской карты',
+    label: 'Донат с нероссийской карты',
     url: 'https://kolezev.donat.media/'
   },
   cryptoAddresses: [
