@@ -1,11 +1,17 @@
+$primary-blue: #1f4499;
+
 :host {
   display: inline-block;
 }
 
 button {
   transition: all 0.2s ease;
-}
-
-button:hover {
-  transform: translateY(-1px);
+  border-color: $primary-blue !important;
+  color: $primary-blue !important;
+  
+  &:hover {
+    background-color: $primary-blue !important;
+    color: white !important;
+    transform: translateY(-1px);
+  }
 }
