@@ -1,3 +1,4 @@
+@use 'sass:color';
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap&subset=cyrillic');
 
 $primary-blue: #1f4499;
@@ -36,7 +37,7 @@ a {
 }
 
 a:hover {
-  color: darken($primary-blue, 10%);
+  color: color.adjust($primary-blue, $lightness: -10%);
 }
 
 a:focus {
