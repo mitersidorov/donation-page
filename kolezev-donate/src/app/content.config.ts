@@ -69,13 +69,13 @@ export const APP_CONTENT: AppContent = {
     title: 'Поддержите работу Дмитрия Колезева — независимого журналиста',
     description: 'Помогите независимому журналисту Дмитрию Колезеву продолжать работу. Донаты через Patreon, PayPal, криптовалюту и другие способы.',
     url: 'https://donate-kolezev.vercel.app',
-    ogImage: '/assets/og/og-image.jpg',
+    ogImage: '/assets/og/ogimage.png',
     author: 'Дмитрий Колезев',
     youtubeChannel: 'https://www.youtube.com/@Kolezev'
   },
   header: {
     avatarUrl: 'https://yt3.googleusercontent.com/FnsiGT9UWbClv3oazFTAGd_2C-PQK5llBdoJYR5KqATLgiSd_236e57otbBSqnLVkLrUZiSS6eY=s300-c-k-c0x00ffffff-no-rj',
-    title: 'Поддержите работу Дмитрия Колезева — независимого журналиста.',
+    title: 'Поддержите работу Дмитрия Колезева — независимого журналиста',
     socialLinks: [
       { platform: 'YouTube', url: 'https://www.youtube.com/@Kolezev', icon: 'pi-youtube' },
       { platform: 'Telegram', url: 'https://t.me/kolezev', icon: 'pi-telegram' },
