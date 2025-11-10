@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://donate-kolezev.vercel.app/sitemap.xml
+Sitemap: https://donate.kolezev.com/sitemap.xml

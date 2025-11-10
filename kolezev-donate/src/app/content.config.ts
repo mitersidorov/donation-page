@@ -68,7 +68,7 @@ export const APP_CONTENT: AppContent = {
   seo: {
     title: 'Поддержите работу Дмитрия Колезева — независимого журналиста',
     description: 'Помогите независимому журналисту Дмитрию Колезеву продолжать работу. Донаты через Patreon, PayPal, криптовалюту и другие способы.',
-    url: 'https://donate-kolezev.vercel.app',
+    url: 'https://donate.kolezev.com',
     ogImage: '/assets/og/ogimage.png',
     author: 'Дмитрий Колезев',
     youtubeChannel: 'https://www.youtube.com/@Kolezev'
