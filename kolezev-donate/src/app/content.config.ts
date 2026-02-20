@@ -145,15 +145,15 @@ export const APP_CONTENT: AppContent = {
     label: 'Донат через американскую НКО',
     url: 'https://www.paypal.com/donate/?hosted_button_id=LQGY54VJ43R3J'
   },
-  vpn: {
-    label: 'Ural VPN',
-    description: 'Оформите подписку на наш VPN — и поможете независимой журналистике.',
-    url: 'https://t.me/ural_vpnbot'
-  },
   otherWays: {
     title: 'Другие способы',
     content: 'Хотите задонатить другим способом? Напишите мне на',
     email: 'kolezev.inbox@gmail.com'
+  },
+  vpn: {
+    label: 'Ural VPN',
+    description: 'Оформите подписку на Ural VPN — и поможете независимой журналистике',
+    url: 'https://t.me/ural_vpnbot'
   },
   footer: {
     advertisingText: 'Размещение рекламы в YouTube, Telegram, Instagram',
